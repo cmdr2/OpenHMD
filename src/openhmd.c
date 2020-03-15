@@ -362,6 +362,13 @@ static int ohmd_device_getf_unp(ohmd_device* device, ohmd_float_value type, floa
 		
 		return OHMD_S_OK;
 	}
+	case OHMD_ACCELEROMETER:
+	{
+		return device->getf(device, OHMD_ACCELEROMETER, out);
+	}
+	case OHMD_GYRO: {
+		return device->getf(device, OHMD_GYRO, out);
+	}
 	case OHMD_UNIVERSAL_DISTORTION_K: {
 		for (int i = 0; i < 4; i++) {
 			out[i] = device->properties.universal_distortion_k[i];

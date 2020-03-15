@@ -496,6 +496,14 @@ static int getf_hmd(rift_hmd_t *hmd, ohmd_float_value type, float* out)
 			*(quatf*)out = hmd->sensor_fusion.orient;
 			break;
 		}
+	case OHMD_ACCELEROMETER: {
+		*(vec3f*)out = hmd->sensor_fusion.accel;
+		break;
+	}
+	case OHMD_GYRO: {
+		*(vec3f*)out = hmd->sensor_fusion.ang_vel;
+		break;
+	}
 
 	case OHMD_POSITION_VECTOR:
 		out[0] = out[1] = out[2] = 0;

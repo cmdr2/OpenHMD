@@ -163,6 +163,12 @@ typedef enum {
 	/** float[OHMD_CONTROL_COUNT] (get): Get the state of the device's controls. */
 	OHMD_CONTROLS_STATE                = 22,
 
+	/** float[3] (get): HACK: Get accelerometer data from IMU */
+	OHMD_ACCELEROMETER                 = 100,
+
+	/** float[3] (get): HACK: Get gyro data from IMU */
+	OHMD_GYRO                          = 101,
+
 } ohmd_float_value;
 
 /** A collection of int value information types used for getting information with ohmd_device_geti(). */
